@@ -36,9 +36,9 @@ namespace Simulador_FIFO___LIFO
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new Size(7, 15);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(988, 518);
             Name = "MainForm";
             Text = "Form1";
             Load += MainForm_Load;
