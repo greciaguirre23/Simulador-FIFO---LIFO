@@ -72,7 +72,7 @@ namespace Simulador_FIFO___LIFO
             Panel = new Panel();
             Panel.Location = new Point(20, 90);
             Panel.Size = new Size(820, 160);
-            Panel.BackColor = Color.FromArgb(240, 243, 238);
+            Panel.BackColor = Color.FromArgb(210, 220, 205);
             Panel.Paint += Panel_Paint;
             this.Controls.Add(Panel);
 

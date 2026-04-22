@@ -54,13 +54,13 @@ namespace Simulador_FIFO___LIFO
 
         private void SetupUI()
         {
-            this.BackColor = Color.FromArgb(18, 18, 18);
+            this.BackColor = Color.FromArgb(247, 248, 245);
             this.Dock = DockStyle.Fill;
 
             Label title = new Label();
             title.Text = "PILA LIFO";
             title.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            title.ForeColor = Color.FromArgb(0, 188, 212);
+            title.ForeColor = Color.FromArgb(44, 62, 45);
             title.AutoSize = true;
             title.Location = new Point(20, 15);
             this.Controls.Add(title);
@@ -68,7 +68,7 @@ namespace Simulador_FIFO___LIFO
             Label subtitle = new Label();
             subtitle.Text = "El ultimo que entra es el primero que sale";
             subtitle.Font = new Font("Segoe UI", 10F);
-            subtitle.ForeColor = Color.FromArgb(150, 150, 150);
+            subtitle.ForeColor = Color.FromArgb(136, 136, 136);
             subtitle.AutoSize = true;
             subtitle.Location = new Point(20, 50);
             this.Controls.Add(subtitle);
@@ -102,7 +102,7 @@ namespace Simulador_FIFO___LIFO
             Canvas = new DoubleBufferedPanel();
             Canvas.Location = new Point(20, 140);
             Canvas.Size = new Size(840, 360);
-            Canvas.BackColor = Color.FromArgb(30, 30, 30);
+            Canvas.BackColor = Color.FromArgb(210, 220, 205);
             Canvas.Paint += Canvas_Paint;
             this.Controls.Add(Canvas);
 
@@ -137,7 +137,7 @@ namespace Simulador_FIFO___LIFO
             BtnAgregar.Location = new Point(215, 535);
             BtnAgregar.Size = new Size(110, 36);
             BtnAgregar.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            BtnAgregar.BackColor = Color.FromArgb(0, 100, 0);
+            BtnAgregar.BackColor = Color.FromArgb(58, 90, 64);
             BtnAgregar.ForeColor = Color.White;
             BtnAgregar.FlatStyle = FlatStyle.Flat;
             BtnAgregar.Click += BtnAgregar_Click;
@@ -149,7 +149,7 @@ namespace Simulador_FIFO___LIFO
             BtnEliminar.Location = new Point(335, 535);
             BtnEliminar.Size = new Size(110, 36);
             BtnEliminar.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            BtnEliminar.BackColor = Color.FromArgb(139, 0, 0);
+            BtnEliminar.BackColor = Color.FromArgb(139, 69, 19);
             BtnEliminar.ForeColor = Color.White;
             BtnEliminar.FlatStyle = FlatStyle.Flat;
             BtnEliminar.Click += BtnEliminar_Click;
@@ -161,8 +161,8 @@ namespace Simulador_FIFO___LIFO
             BtnElegir.Location = new Point(455, 535);
             BtnElegir.Size = new Size(90, 36);
             BtnElegir.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            BtnElegir.BackColor = Color.FromArgb(180, 140, 0);
-            BtnElegir.ForeColor = Color.White;
+            BtnElegir.BackColor = Color.FromArgb(163, 184, 153);
+            BtnElegir.ForeColor = Color.FromArgb(44, 62, 45);
             BtnElegir.FlatStyle = FlatStyle.Flat;
             BtnElegir.Click += BtnElegir_Click;
             this.Controls.Add(BtnElegir);
@@ -173,8 +173,8 @@ namespace Simulador_FIFO___LIFO
             BtnEjemplo.Location = new Point(555, 535);
             BtnEjemplo.Size = new Size(140, 36);
             BtnEjemplo.Font = new Font("Segoe UI", 10F);
-            BtnEjemplo.BackColor = Color.FromArgb(50, 50, 150);
-            BtnEjemplo.ForeColor = Color.White;
+            BtnEjemplo.BackColor = Color.FromArgb(232, 237, 230);
+            BtnEjemplo.ForeColor = Color.FromArgb(58, 90, 64);
             BtnEjemplo.FlatStyle = FlatStyle.Flat;
             BtnEjemplo.Click += BtnEjemplo_Click;
             this.Controls.Add(BtnEjemplo);
@@ -183,7 +183,7 @@ namespace Simulador_FIFO___LIFO
             LblEstado = new Label();
             LblEstado.Text = "Ingrese un valor y de click en agregar";
             LblEstado.Font = new Font("Segoe UI", 10F, FontStyle.Italic);
-            LblEstado.ForeColor = Color.FromArgb(180, 180, 180);
+            LblEstado.ForeColor = Color.FromArgb(136, 136, 136);
             LblEstado.AutoSize = true;
             LblEstado.Location = new Point(20, 590);
             this.Controls.Add(LblEstado);
@@ -389,7 +389,7 @@ namespace Simulador_FIFO___LIFO
 
             Rectangle area = new Rectangle(centerX - stackWidth / 2, 20, stackWidth, Canvas.Height - 40);
 
-            using (Pen pen = new Pen(Color.FromArgb(90, 90, 90), 2))
+            using (Pen pen = new Pen(Color.FromArgb(163, 184, 153), 2))
             {
                 g.DrawLine(pen, area.Left, area.Top, area.Left, area.Bottom);
                 g.DrawLine(pen, area.Right, area.Top, area.Right, area.Bottom);
@@ -410,8 +410,8 @@ namespace Simulador_FIFO___LIFO
 
             using (var brush = new LinearGradientBrush(
                 rect,
-                Color.FromArgb(0, 63, 127),
-                Color.FromArgb(0, 31, 63),
+                Color.FromArgb(58, 90, 64),   
+                Color.FromArgb(44, 62, 45),
                 LinearGradientMode.Vertical))
             {
                 GraphicsPath fillPath = GetRoundedRectangle(rect, 10);
@@ -421,11 +421,11 @@ namespace Simulador_FIFO___LIFO
             Color borderColor;
 
             if (el.Highlight)
-                borderColor = Color.FromArgb(253, 185, 19);
-            else if (index == visualElements.Count - 1)
-                borderColor = Color.FromArgb(255, 100, 100);
+                borderColor = Color.FromArgb(163, 184, 153);  
+            else if (index== visualElements.Count - 1  )
+                borderColor = Color.FromArgb(139, 69, 19);    
             else
-                borderColor = Color.FromArgb(0, 150, 200);
+                borderColor = Color.FromArgb(216, 224, 212);
 
             using (var pen = new Pen(borderColor, 2.5f))
             {
